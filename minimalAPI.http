@@ -1,0 +1,44 @@
+@minimalAPI_HostAddress = http://localhost:5185
+
+### weatherforecast
+GET {{minimalAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+### message
+GET {{minimalAPI_HostAddress}}/message/
+Accept: application/json
+
+
+### Employee - GetAll
+GET {{minimalAPI_HostAddress}}/employees/
+Accept: application/json
+
+### Employee - GetById not found
+GET {{minimalAPI_HostAddress}}/employees/-2
+Accept: application/json
+
+### Employee - GetById found
+GET {{minimalAPI_HostAddress}}/employees/1
+Accept: application/json
+
+### Employee - Create
+POST {{minimalAPI_HostAddress}}/employees/
+Content-Type: application/json
+
+{
+  "FirstName": "Miu",
+  "LastName": "Fato"
+}
+
+### Employee - Update
+PUT {{minimalAPI_HostAddress}}/employees/8
+Content-Type: application/json
+
+  {
+    "id": 8,
+    "firstName": "Miu",
+    "lastName": "Gato"
+  }
+
+### Employee - Delete
+DELETE {{minimalAPI_HostAddress}}/employees/6
